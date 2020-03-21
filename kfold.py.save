@@ -80,13 +80,10 @@ for i in range(3,6,1):
   stdf1=np.std(f1)     #8
   r=[meanacc, stdacc, meanpr,stdpr, meanre,stdre ,meanf1, stdf1]
 
-  with open('Resultsxgbserver.csv', 'a+', newline='') as file:
+  with opResultsxgb2.csv', 'a+', newline='') as file:
     writer = csv.writer(file)
     writer.writerow(r)
     #serial=serial + 1
 
-#import warnings
-#warnings.filterwarnings('ignore')
-
-
-#len(range(3,6,1))
+import warnings
+warnings.filterwarnings('ignore')
