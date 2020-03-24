@@ -100,7 +100,7 @@ for i in range(1,21,1):
   stdf1=np.std(f1)     #8
   r=[meanacc, stdacc, meanpr,stdpr, meanre,stdre ,meanf1, stdf1]
 
-  with open('/content/gdrive/My Drive/Resultsxgb2.csv', 'a+', newline='') as file:
+  with open('/content/gdrive/My Drive/Results20.csv', 'a+', newline='') as file:
     writer = csv.writer(file)
     writer.writerow(r)
     #serial=serial + 1
