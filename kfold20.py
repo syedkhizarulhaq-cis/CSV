@@ -8,10 +8,8 @@ Original file is located at
 """
 
 import pandas as pd
-from google.colab import drive
-drive.mount('/content/gdrive')
-path='/content/gdrive/My Drive/new_df.csv'
-Y=pd.read_csv(path, index_col='ProtocolName')
+path='new_df.csv'
+Y=pd.read_csv(path, index_col='ProtocolName'))
 
 Y.drop(columns=['Unnamed: 0'], inplace=True)
 Y = Y.reset_index(drop=False)
@@ -100,12 +98,11 @@ for i in range(1,21,1):
   stdf1=np.std(f1)     #8
   r=[meanacc, stdacc, meanpr,stdpr, meanre,stdre ,meanf1, stdf1]
 
-  with open('/content/gdrive/My Drive/Results20.csv', 'a+', newline='') as file:
+  with open('Results20.csv', 'a+', newline='') as file:
     writer = csv.writer(file)
     writer.writerow(r)
     #serial=serial + 1
 
-import warnings
-warnings.filterwarnings('ignore')
 
-len(range(1,21,1))
+
+
