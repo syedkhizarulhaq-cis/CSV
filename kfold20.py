@@ -9,7 +9,7 @@ Original file is located at
 
 import pandas as pd
 path='new_df.csv'
-Y=pd.read_csv(path, index_col='ProtocolName'))
+Y=pd.read_csv(path, index_col='ProtocolName')
 
 Y.drop(columns=['Unnamed: 0'], inplace=True)
 Y = Y.reset_index(drop=False)
