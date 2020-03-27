@@ -8,9 +8,8 @@ Original file is located at
 """
 
 import pandas as pd
-from google.colab import drive
-drive.mount('/content/gdrive')
-path='/content/gdrive/My Drive/new_df5.csv'
+import pickle
+path='new_df4.csv'
 Y=pd.read_csv(path, index_col='ProtocolName')
 
 Y = Y.reset_index(drop=False)
@@ -46,12 +45,10 @@ grid_search = GridSearchCV(
 )
 
 # Commented out IPython magic to ensure Python compatibility.
-# %%time
 # 
-# modelbest=grid_search.fit(x_train, y_train)
+modelbest=grid_search.fit(x_train, y_train)
 
 a=modelbest
 
-import pickle
 output = open('xg1000and10000.sav', 'wb')
 pickle.dump(a,output)
